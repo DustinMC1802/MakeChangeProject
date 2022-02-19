@@ -11,19 +11,16 @@ public class CashRegister {
 		double amountTendered = tenderPrompt();
 		
 		if (amountTendered == itemPrice) {
-			
 			exactChange();
 			
 		}
 		
 		else if (amountTendered < itemPrice) {
-			
 			underPay();
 		}
 		
 		else {
-			
-			overPay();
+			overPay(itemPrice, amountTendered);
 		}
 	}
 
@@ -58,7 +55,10 @@ public class CashRegister {
 		
 	}
 	
-	public static void overPay() {
+	public static void overPay(double price, double tendered) {
+		double change = price - tendered;
+		
+		
 		
 	}
 	
