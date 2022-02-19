@@ -79,7 +79,7 @@ public class CashRegister {
 		}
 		while (change >= 1) {
 			ones++;
-			change = change - (ones);
+			change--;
 		}
 		
 
@@ -87,8 +87,6 @@ public class CashRegister {
 			System.out.print(twenties + " twenties, ");
 		} else if ( twenties == 1){
 			System.out.print(twenties + " twenty, ");
-//		} else {
-//			System.out.println("");
 		}
 		if (tens > 1) {
 			System.out.print(tens + " tens, ");
@@ -102,7 +100,7 @@ public class CashRegister {
 			System.out.print(fives + " five, ");
 		}
 		
-		if (ones >= 1) {
+		if (ones > 1) {
 			System.out.print(ones + " ones, ");
 		} else if (ones == 1){
 			System.out.print(ones + " one, ");
