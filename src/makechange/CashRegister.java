@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class CashRegister {
 
 	public static void main(String[] args) {
+		
 
 		double itemPrice = pricePrompt();
 		double amountTendered = tenderPrompt();
 
+		
 		if (amountTendered == itemPrice) {
 			exactChange();
 		}
@@ -20,6 +22,10 @@ public class CashRegister {
 		else {
 			overPay(itemPrice, amountTendered);
 		}
+		
+		
+		
+	
 	}
 
 	public static double pricePrompt() {
@@ -30,6 +36,7 @@ public class CashRegister {
 		inputPrice = kb.nextDouble();
 
 		return inputPrice;
+		
 	}
 
 	public static double tenderPrompt() {
@@ -65,23 +72,38 @@ public class CashRegister {
 
 		System.out.print("Result: ");
 
-		while (change > 20.0) {
+		while (change >= 20) {
 			twenties++;
-			change = change - (twenties * 20);
+			change -= 20;
 		}
 		while (change >= 10) {
 			tens++;
-			change = change - (tens * 10);
+			change -= 10;
 		}
 		while (change >= 5) {
 			fives++;
-			change = change - (fives * 5);
+			change -= - 5;
 		}
 		while (change >= 1) {
 			ones++;
 			change--;
 		}
-		
+		while (change >= .25) {
+			quarters++;
+			change -= .25;
+		}
+		while (change >= .10) {
+			dimes++;
+			change -= .10;
+		}
+		while (change >= .05) {
+			nickels++;
+			change -= .05;
+		}
+		while (change >= .01) {
+			pennies++;
+			change -= .01;
+		}
 
 		if (twenties > 1) {
 			System.out.print(twenties + " twenties, ");
@@ -105,6 +127,30 @@ public class CashRegister {
 		} else if (ones == 1){
 			System.out.print(ones + " one, ");
 		}
+		
+		if (quarters > 1) {
+			System.out.println(quarters + " quarters, ");
+		} else if (quarters == 1) {
+			System.out.println(quarters + " quarter, ");
+		}
+		
+		if (dimes > 1) {
+			System.out.println(dimes + " dimes, ");
+		} else if (dimes == 1) {
+			System.out.println(dimes + " dime, ");
+		}
+		
+		if (nickels > 1) {
+			System.out.println(nickels + " nickels, ");
+		} else if (nickels == 1) {
+			System.out.println(nickels + " nickel, ");
+		}
+		
+		if (pennies > 1) {
+			System.out.println(pennies + " pennies");
+		} else if (pennies == 1) {
+			System.out.println(pennies + " penny");
+		} 
 
 	}
 
