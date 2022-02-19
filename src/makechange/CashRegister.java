@@ -23,9 +23,6 @@ public class CashRegister {
 			overPay(itemPrice, amountTendered);
 		}
 		
-		
-		
-	
 	}
 
 	public static double pricePrompt() {
@@ -82,12 +79,15 @@ public class CashRegister {
 		}
 		while (change >= 5) {
 			fives++;
-			change -= - 5;
+			change -= 5;
 		}
 		while (change >= 1) {
 			ones++;
-			change--;
+			change -= 1;
 		}
+		
+		change += 0.005;
+		
 		while (change >= .25) {
 			quarters++;
 			change -= .25;
