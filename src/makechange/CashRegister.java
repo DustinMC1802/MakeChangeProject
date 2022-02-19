@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class CashRegister {
 
 	public static void main(String[] args) {
-		Scanner kb = new Scanner(System.in);
 
 		double itemPrice = 0.0;
 		double amountTendered = 0.0;
@@ -23,13 +22,20 @@ public class CashRegister {
 		Scanner kb = new Scanner(System.in);
 		double inputPrice;
 		
-		System.out.println("Enter the price of the item :");
+		System.out.println("Enter the price of the item:");
 		inputPrice = kb.nextDouble();
 		
 		return inputPrice;
 	}
 	
-	public static void tenderPrompt() {
+	public static double tenderPrompt() {
+		Scanner kb = new Scanner(System.in);
+		double inputTender;
+		
+		System.out.println("Enter the amount tendered:");
+		inputTender = kb.nextDouble();
+		
+		return inputTender;
 		
 	}
 	
