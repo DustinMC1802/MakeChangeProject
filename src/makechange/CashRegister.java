@@ -58,6 +58,16 @@ public class CashRegister {
 	public static void overPay(double price, double tendered) {
 		double change = price - tendered;
 		
+		int twenties;
+		int tens;
+		int fives;
+		int ones;
+		int quarters;
+		int dimes;
+		int nickels;
+		int pennies;
+		
+		
 		
 		
 	}
