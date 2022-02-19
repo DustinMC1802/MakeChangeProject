@@ -5,39 +5,33 @@ import java.util.Scanner;
 public class CashRegister {
 
 	public static void main(String[] args) {
-		
+		Scanner kb = new Scanner(System.in);
 
-		double itemPrice = pricePrompt();
-		double amountTendered = tenderPrompt();
+		double itemPrice = pricePrompt(kb);
+		double amountTendered = tenderPrompt(kb);
 
 		
 		if (amountTendered == itemPrice) {
 			exactChange();
-		}
-
-		else if (amountTendered < itemPrice) {
+		} else if (amountTendered < itemPrice) {
 			underPay();
-		}
-
-		else {
+		} else {
 			overPay(itemPrice, amountTendered);
 		}
 		
+		kb.close();
 	}
 
-	public static double pricePrompt() {
-		Scanner kb = new Scanner(System.in);
+	public static double pricePrompt(Scanner kb) {
 		double inputPrice;
 
 		System.out.println("Amount:");
 		inputPrice = kb.nextDouble();
 
 		return inputPrice;
-		
 	}
 
-	public static double tenderPrompt() {
-		Scanner kb = new Scanner(System.in);
+	public static double tenderPrompt(Scanner kb) {
 		double inputTender;
 
 		System.out.println("Tendered:");
@@ -67,7 +61,7 @@ public class CashRegister {
 
 		double change = tendered - price;
 
-		System.out.print("Result: ");
+		System.out.println("Result: ");
 
 		while (change >= 20) {
 			twenties++;
@@ -106,44 +100,44 @@ public class CashRegister {
 		}
 
 		if (twenties > 1) {
-			System.out.print(twenties + " twenties, ");
+			System.out.println(twenties + " twenties");
 		} else if ( twenties == 1){
-			System.out.print(twenties + " twenty, ");
+			System.out.println(twenties + " twenty");
 		}
 		if (tens > 1) {
-			System.out.print(tens + " tens, ");
+			System.out.println(tens + " tens");
 		} else if (tens == 1){
-			System.out.print(tens + " ten, ");
+			System.out.println(tens + " ten");
 		}
 		
 		if (fives > 1) {
-			System.out.print(fives + " fives, ");
+			System.out.println(fives + " fives");
 		} else if (fives == 1){
-			System.out.print(fives + " five, ");
+			System.out.println(fives + " five");
 		}
 		
 		if (ones > 1) {
-			System.out.print(ones + " ones, ");
+			System.out.println(ones + " ones");
 		} else if (ones == 1){
-			System.out.print(ones + " one, ");
+			System.out.println(ones + " one");
 		}
 		
 		if (quarters > 1) {
-			System.out.println(quarters + " quarters, ");
+			System.out.println(quarters + " quarters");
 		} else if (quarters == 1) {
-			System.out.println(quarters + " quarter, ");
+			System.out.println(quarters + " quarter");
 		}
 		
 		if (dimes > 1) {
-			System.out.println(dimes + " dimes, ");
+			System.out.println(dimes + " dimes");
 		} else if (dimes == 1) {
-			System.out.println(dimes + " dime, ");
+			System.out.println(dimes + " dime");
 		}
 		
 		if (nickels > 1) {
-			System.out.println(nickels + " nickels, ");
+			System.out.println(nickels + " nickels");
 		} else if (nickels == 1) {
-			System.out.println(nickels + " nickel, ");
+			System.out.println(nickels + " nickel");
 		}
 		
 		if (pennies > 1) {
