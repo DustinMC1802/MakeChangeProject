@@ -8,6 +8,13 @@ public class CashRegister {
 
 		Scanner kb = new Scanner(System.in);
 		
+		pricePrompt();
 	}
 
+	public static void pricePrompt() {
+		
+		
+	}
+	
+	
 }
