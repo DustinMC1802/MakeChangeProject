@@ -12,6 +12,7 @@ public class CashRegister {
 		tenderPrompt();
 		exactChange();
 		underPay();
+		overPay();
 	}
 
 	public static void pricePrompt() {
@@ -28,6 +29,10 @@ public class CashRegister {
 	}
 	
 	public static void underPay() {
+		
+	}
+	
+	public static void overPay() {
 		
 	}
 	
