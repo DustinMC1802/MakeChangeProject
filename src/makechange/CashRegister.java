@@ -49,10 +49,12 @@ public class CashRegister {
 	}
 	
 	public static void exactChange() {
+		System.out.println("The customer paid with the exact amount, no change needed.");
 		
 	}
 	
 	public static void underPay() {
+		System.out.println("The customer did not pay enough for the item.");
 		
 	}
 	
