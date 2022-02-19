@@ -9,7 +9,6 @@ public class CashRegister {
 		
 		double itemPrice = pricePrompt();
 		double amountTendered = tenderPrompt();
-		int result = 0;
 		
 		if (amountTendered == itemPrice) {
 			exactChange();
@@ -23,7 +22,6 @@ public class CashRegister {
 		else {
 			overPay(itemPrice, amountTendered);
 		}
-		System.out.println(result);
 	}
 
 	public static double pricePrompt() {
@@ -58,7 +56,6 @@ public class CashRegister {
 	}
 	
 	public static void overPay(double price, double tendered) {
-		double change = price - tendered;
 		
 		int twenties = 0;
 		int tens = 0;
@@ -69,22 +66,37 @@ public class CashRegister {
 		int nickels = 0;
 		int pennies = 0;
 		
-		while (change >= 20) {
-			double changeTwenties = change % 20;
+		double change = tendered - price;
+		
+		System.out.print("Give the customer back: ");
+		
+		while (change > 20.0) {
 			twenties++;
-			change = change - (twenties * 20);
+			if (twenties > 1) {
+				System.out.print(twenties + " twenties, ");	
+			} else {
+				System.out.print(twenties + " twenty, ");	
+				
+			}
 		}
+		
+		change = change - (twenties * 20);
 			
-		while (change < 20 && change >= 10) {
+		while (change >= 10) {
 			double changeTens = change % 10;
 			tens++;
 			change = change - (tens * 10);
+			if (tens > 1) {
+				System.out.print(tens + " tens, ");	
+			} else {
+				System.out.print(tens + " ten, ");	
+				
+			}
 		
 			
 			
 		}
 			
-		System.out.println(twenties + " twenties, " + tens + "tens");	
 		
 		
 		
