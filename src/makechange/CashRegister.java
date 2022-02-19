@@ -26,7 +26,7 @@ public class CashRegister {
 		Scanner kb = new Scanner(System.in);
 		double inputPrice;
 
-		System.out.println("Enter the price of the item:");
+		System.out.println("Amount:");
 		inputPrice = kb.nextDouble();
 
 		return inputPrice;
@@ -36,7 +36,7 @@ public class CashRegister {
 		Scanner kb = new Scanner(System.in);
 		double inputTender;
 
-		System.out.println("Enter the amount tendered:");
+		System.out.println("Tendered:");
 		inputTender = kb.nextDouble();
 
 		return inputTender;
@@ -63,7 +63,7 @@ public class CashRegister {
 
 		double change = tendered - price;
 
-		System.out.print("Give the customer back: ");
+		System.out.print("Result: ");
 
 		while (change > 20.0) {
 			twenties++;
@@ -85,22 +85,26 @@ public class CashRegister {
 
 		if (twenties > 1) {
 			System.out.print(twenties + " twenties, ");
-		} else {
+		} else if ( twenties == 1){
 			System.out.print(twenties + " twenty, ");
+//		} else {
+//			System.out.println("");
 		}
 		if (tens > 1) {
 			System.out.print(tens + " tens, ");
-		} else {
+		} else if (tens == 1){
 			System.out.print(tens + " ten, ");
 		}
+		
 		if (fives > 1) {
 			System.out.print(fives + " fives, ");
-		} else {
+		} else if (fives == 1){
 			System.out.print(fives + " five, ");
 		}
+		
 		if (ones >= 1) {
 			System.out.print(ones + " ones, ");
-		} else {
+		} else if (ones == 1){
 			System.out.print(ones + " one, ");
 		}
 
