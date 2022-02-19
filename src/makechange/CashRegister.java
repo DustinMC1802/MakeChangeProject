@@ -6,11 +6,9 @@ public class CashRegister {
 
 	public static void main(String[] args) {
 
-		double itemPrice = 0.0;
-		double amountTendered = 0.0;
 		
-		pricePrompt();
-		tenderPrompt();
+		double itemPrice = pricePrompt();
+		double amountTendered = tenderPrompt();
 		
 		
 		exactChange();
