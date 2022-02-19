@@ -9,10 +9,15 @@ public class CashRegister {
 		Scanner kb = new Scanner(System.in);
 		
 		pricePrompt();
+		tenderPrompt();
 	}
 
 	public static void pricePrompt() {
 		
+		
+	}
+	
+	public static void tenderPrompt() {
 		
 	}
 	
