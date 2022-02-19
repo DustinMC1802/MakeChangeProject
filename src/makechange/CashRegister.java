@@ -7,9 +7,13 @@ public class CashRegister {
 	public static void main(String[] args) {
 
 		Scanner kb = new Scanner(System.in);
+		double itemPrice = 0.0;
+		double amountTendered = 0.0;
 		
 		pricePrompt();
 		tenderPrompt();
+		
+		
 		exactChange();
 		underPay();
 		overPay();
