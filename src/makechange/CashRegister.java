@@ -10,6 +10,7 @@ public class CashRegister {
 		
 		pricePrompt();
 		tenderPrompt();
+		exactChange();
 	}
 
 	public static void pricePrompt() {
@@ -18,6 +19,10 @@ public class CashRegister {
 	}
 	
 	public static void tenderPrompt() {
+		
+	}
+	
+	public static void exactChange() {
 		
 	}
 	
