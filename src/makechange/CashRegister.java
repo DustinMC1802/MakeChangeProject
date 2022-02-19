@@ -10,10 +10,21 @@ public class CashRegister {
 		double itemPrice = pricePrompt();
 		double amountTendered = tenderPrompt();
 		
+		if (amountTendered == itemPrice) {
+			
+			exactChange();
+			
+		}
 		
-		exactChange();
-		underPay();
-		overPay();
+		else if (amountTendered < itemPrice) {
+			
+			underPay();
+		}
+		
+		else {
+			
+			overPay();
+		}
 	}
 
 	public static double pricePrompt() {
